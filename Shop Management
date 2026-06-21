@@ -1,0 +1,51 @@
+package shop.product;
+
+public class Product {
+
+    private String productId;
+    private String productName;
+    private double price;
+    public int stock;
+
+    public Product(String productId,
+                   String productName,
+                   double price,
+                   int stock) {
+
+        this.productId = productId;
+        this.productName = productName;
+        this.price = price;
+        this.stock = stock;
+    }
+
+    public String getProductId() {
+        return productId;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void reduceStock(int qty) {
+        stock = stock - qty;
+    }
+
+    public void displayProduct() {
+
+        System.out.println(productId
+                + " | "
+                + productName
+                + " | "
+                + price
+                + " | "
+                + stock);
+    }
+}
